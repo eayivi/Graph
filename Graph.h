@@ -45,10 +45,10 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor, vertex_descriptor, Graph&) {
+        friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor v1, vertex_descriptor v2, Graph& graph) {
             // <your code>
-            edge_descriptor ed;
-            bool            b;
+            edge_descriptor ed(v1, v2);
+            bool            b = graph.e.insert(ed).second;
             return std::make_pair(ed, b);}
 
         // ----------
@@ -180,7 +180,15 @@ class Graph {
         // data
         // ----
 
-        std::vector< std::vector<vertex_descriptor> > g; // something like this
+        /*
+         *  Data consists of a graph using the vector container, and sets to hold the edges and
+         *  vertices. The sets will allow for only unique values and return false if non-unique
+         *  additions are attempted.
+         */
+
+        std::vector< std::vector<vertex_descriptor> > g;
+        std::set<vertex_descriptor> v;
+        std::set<edge_descriptor> e;
 
         // -----
         // valid
