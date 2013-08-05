@@ -26,15 +26,16 @@ class Graph {
         // typedefs
         // --------
 
-        typedef int vertex_descriptor;  // fix!
-        typedef int edge_descriptor;    // fix!
+        typedef int                                             vertex_descriptor;
+        typedef std::pair<vertex_descriptor, vertex_descriptor> edge_descriptor;
 
-        typedef int* vertex_iterator;    // fix!
-        typedef int* edge_iterator;      // fix!
-        typedef int* adjacency_iterator; // fix!
+        typedef std::vector<vertex_descriptor>::const_iterator  vertex_iterator;
+        typedef std::set<edge_descriptor>::const_iterator       edge_iterator;       
+        typedef std::set<vertex_descriptor>::const_iterator     adjacency_iterator;
 
-        typedef std::size_t vertices_size_type;
-        typedef std::size_t edges_size_type;
+        typedef std::size_t                                     vertices_size_type;
+        typedef std::size_t                                     edges_size_type;
+
 
     public:
         // --------
