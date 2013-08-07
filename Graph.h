@@ -63,7 +63,9 @@ class Graph {
         // ----------
 
         /**
-         * <your documentation>
+         *  add_vertex creates a vertex descriptor with an integer equal to the size of the graph vector after the insertion.
+         *  If the insertion into the vertex set is successful, then a push_back is performed on the graph vector using the 
+         *  default constructor.
          */
         friend vertex_descriptor add_vertex (Graph& graph) {
             // <your code>
@@ -79,10 +81,11 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend std::pair<adjacency_iterator, adjacency_iterator> adjacent_vertices (vertex_descriptor, const Graph&) {
+        friend std::pair<adjacency_iterator, adjacency_iterator> adjacent_vertices (vertex_descriptor v1, const Graph& graph) {
             // <your code>
             adjacency_iterator b = adjacency_iterator();
             adjacency_iterator e = adjacency_iterator();
+
             return std::make_pair(b, e);}
 
         // ----
