@@ -43,12 +43,19 @@ class Graph {
         // --------
 
         /**
-         * <your documentation>
+         *  add_edge creates an edge and adds it to the edge set. If the edge is successfully added to the edge set,
+         *  then the edge is also added to the graph vector. The vector is stored by the first vertex to give it a
+         *  direction as specified by the directed graph requirement.
          */
         friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor v1, vertex_descriptor v2, Graph& graph) {
             // <your code>
             edge_descriptor ed(v1, v2);
-            bool            b = graph.e.insert(ed).second;
+            bool            b = graph.edgeSet.insert(ed).second;
+            if (b == true){
+                // Add ed to g
+                assert(b != false);
+                graph.gVector[v1].push_back(v2);
+            }
             return std::make_pair(ed, b);}
 
         // ----------
@@ -58,9 +65,11 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend vertex_descriptor add_vertex (Graph&) {
+        friend vertex_descriptor add_vertex (Graph& graph) {
             // <your code>
-            vertex_descriptor v;
+            vertex_descriptor v = graph.gVector.size() + 1;
+            if (graph.vertexSet.insert(v).second)
+                graph.gVector.push_back(std::vector<vertex_descriptor> ());
             return v;}
 
         // -----------------
@@ -186,9 +195,9 @@ class Graph {
          *  additions are attempted.
          */
 
-        std::vector< std::vector<vertex_descriptor> > g;
-        std::set<vertex_descriptor> v;
-        std::set<edge_descriptor> e;
+        std::vector< std::vector<vertex_descriptor> > gVector;
+        std::set<vertex_descriptor> vertexSet;
+        std::set<edge_descriptor> edgeSet;
 
         // -----
         // valid
