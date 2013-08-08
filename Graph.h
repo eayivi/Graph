@@ -152,11 +152,11 @@ class Graph {
         // ------
 
         /**
-         * <your documentation>
+         *  Returns the first vertex in an edge descriptor, which is the source.
          */
-        friend vertex_descriptor source (edge_descriptor, const Graph&) {
+        friend vertex_descriptor source (edge_descriptor ed, const Graph& graph) {
             // <your code>
-            vertex_descriptor v;
+            vertex_descriptor v = ed.first;
             return v;}
 
         // ------
@@ -164,11 +164,11 @@ class Graph {
         // ------
 
         /**
-         * <your documentation>
+         *  Returns the second vertex in an edge_descriptor, which is the target.
          */
-        friend vertex_descriptor target (edge_descriptor, const Graph&) {
+        friend vertex_descriptor target (edge_descriptor ed, const Graph& graph) {
             // <your code>
-            vertex_descriptor v;
+            vertex_descriptor v = ed.second;
             return v;}
 
         // ------
@@ -176,11 +176,11 @@ class Graph {
         // ------
 
         /**
-         * <your documentation>
+         *  Return the s vertex from the vertex set.
          */
-        friend vertex_descriptor vertex (vertices_size_type, const Graph&) {
+        friend vertex_descriptor vertex (vertices_size_type s, const Graph& graph) {
             // <your code>
-            vertex_descriptor vd;
+            vertex_descriptor vd = *(graph.vertexSet.find(s));
             return vd;}
 
         // --------
@@ -190,10 +190,10 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend std::pair<vertex_iterator, vertex_iterator> vertices (const Graph&) {
+        friend std::pair<vertex_iterator, vertex_iterator> vertices (const Graph& graph) {
             // <your code>
-            vertex_iterator b = vertex_iterator();
-            vertex_iterator e = vertex_iterator();
+            vertex_iterator b = graph.vertexSet.begin();
+            vertex_iterator e = graph.vertexSet.end();
             return std::make_pair(b, e);}
 
     private:
