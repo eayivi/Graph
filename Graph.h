@@ -29,9 +29,9 @@ class Graph {
         typedef int                                             vertex_descriptor;
         typedef std::pair<vertex_descriptor, vertex_descriptor> edge_descriptor;
 
-        typedef std::vector<vertex_descriptor>::const_iterator  vertex_iterator;
-        typedef std::set<edge_descriptor>::const_iterator       edge_iterator;       
-        typedef std::set<vertex_descriptor>::const_iterator     adjacency_iterator;
+        typedef std::set<vertex_descriptor>::const_iterator     vertex_iterator;	/* Set, since using vertexSet */
+        typedef std::set<edge_descriptor>::const_iterator       edge_iterator;       	/* Set, since using edgeSet */
+        typedef std::vector<vertex_descriptor>::const_iterator  adjacency_iterator;	/* Vector, since using gVector */
 
         typedef std::size_t                                     vertices_size_type;
         typedef std::size_t                                     edges_size_type;
@@ -79,12 +79,13 @@ class Graph {
         // -----------------
 
         /**
-         * <your documentation>
+         *  Creates two adjacency iterators from the begin and end iterator functions
+         *  of the vector container using the vector const_iterator for the adjacency iterator.
          */
         friend std::pair<adjacency_iterator, adjacency_iterator> adjacent_vertices (vertex_descriptor v1, const Graph& graph) {
             // <your code>
-            adjacency_iterator b = adjacency_iterator();
-            adjacency_iterator e = adjacency_iterator();
+	    adjacency_iterator b = graph.gVector[v1].begin();
+	    adjacency_iterator e = graph.gVector[v1].end();
 
             return std::make_pair(b, e);}
 
@@ -106,12 +107,13 @@ class Graph {
         // -----
 
         /**
-         * <your documentation>
+         *  Creates a pair of iterators from the begin and end iterator functions
+         *  of the set container using the set const_iterator for the edge_iterators.
          */
-        friend std::pair<edge_iterator, edge_iterator> edges (const Graph&) {
+        friend std::pair<edge_iterator, edge_iterator> edges (const Graph& graph) {
             // <your code>
-            edge_iterator b;
-            edge_iterator e;
+            edge_iterator b = graph.edgeSet.begin();
+            edge_iterator e = graph.edgeSet.end();
             return std::make_pair(b, e);}
 
         // ---------
