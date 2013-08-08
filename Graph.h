@@ -119,11 +119,12 @@ class Graph {
         // ---------
 
         /**
-         * <your documentation>
+         *  num_edges uses the size function of the set conatiner to return the
+         *  number of edges that have been created and added to the graph.
          */
-        friend edges_size_type num_edges (const Graph&) {
+        friend edges_size_type num_edges (const Graph& graph) {
             // <your code>
-            edges_size_type s;
+            edges_size_type s = graph.edgeSet.size();
             return s;}
 
         // ------------
@@ -131,11 +132,12 @@ class Graph {
         // ------------
 
         /**
-         * <your documentation>
+         *  num_vertices uses the size function of the set container to return the
+	 *  number of vertices that have been created and added to the graph.
          */
-        friend vertices_size_type num_vertices (const Graph&) {
+        friend vertices_size_type num_vertices (const Graph& graph) {
             // <your code>
-            vertices_size_type s;
+            vertices_size_type s = graph.vertexSet.size();
             return s;}
 
         // ------
