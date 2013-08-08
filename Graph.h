@@ -94,12 +94,17 @@ class Graph {
         // ----
 
         /**
-         * <your documentation>
+         *  Given 2 vertices, edge returns an edge_descriptor containing the two vertices. If the edges are not found,
+         *  b is returned as false.
          */
-        friend std::pair<edge_descriptor, bool> edge (vertex_descriptor, vertex_descriptor, const Graph&) {
+        friend std::pair<edge_descriptor, bool> edge (vertex_descriptor v1, vertex_descriptor v2, const Graph& graph) {
             // <your code>
-            edge_descriptor ed;
-            bool            b;
+            edge_descriptor ed(v1, v2);
+            bool            b = true;
+	    
+	    if (graph.edgeSet.find(ed) == graph.edgeSet.end())
+	        b = false;
+
             return std::make_pair(ed, b);}
 
         // -----
