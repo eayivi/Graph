@@ -36,7 +36,7 @@ To test the program:
 #include "boost/graph/adjacency_list.hpp"  // adjacency_list
 #include "boost/graph/topological_sort.hpp"// topological_sort
 
-#include "Graph2.h"
+#include "Graph.h"
 
 // ---------
 // TestGraph
@@ -562,7 +562,7 @@ TYPED_TEST(TypeTest, test_vertices_default )
 // --------------
 // test_has_cycle
 // --------------
-
+/*
 TYPED_TEST(TypeTest, test_has_cycle ) 
 {
     this->SetUp();
@@ -659,3 +659,4 @@ TYPED_TEST (TypeTest, test_topological_sort_default )
         ASSERT_TRUE(false);
     }
 }
+*/

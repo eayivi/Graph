@@ -15,6 +15,7 @@
 #include <cstddef> // size_t
 #include <utility> // make_pair, pair
 #include <vector>  // vector
+#include <map>     // map
 
 // -----
 // Graph
@@ -152,7 +153,7 @@ class Graph {
         // ------
 
         /**
-         *  Returns the first vertex in an edge descriptor, which is the source.
+         *  Returns the first vertex in the edge descriptor pair, which is the source.
          */
         friend vertex_descriptor source (edge_descriptor ed, const Graph& graph) {
             // <your code>
@@ -164,7 +165,7 @@ class Graph {
         // ------
 
         /**
-         *  Returns the second vertex in an edge_descriptor, which is the target.
+         *  Returns the second vertex in the edge_descriptor pair, which is the target.
          */
         friend vertex_descriptor target (edge_descriptor ed, const Graph& graph) {
             // <your code>
@@ -188,7 +189,8 @@ class Graph {
         // --------
 
         /**
-         * <your documentation>
+         *  The pair b and e are iterators to the first and last + 1 vertices in the vertex set.
+         *  This allows an iteration through all of the vertices of the set.
          */
         friend std::pair<vertex_iterator, vertex_iterator> vertices (const Graph& graph) {
             // <your code>
@@ -245,12 +247,29 @@ class Graph {
 // ---------
 
 /**
- * depth-first traversal
- * three colors
- * <your documentation>
+ *  depth-first traversal
+ *  three colors
+ *  The has_cycle() function will utilize three colors: white, grey, and black.
+ *  White designates a node that has not yet been visited. Grey represents a node
+ *  that has already been visited and could potentially be a part of a cycle. Black
+ *  designates a node that has already been visited and has no further links.
+ *  White = 0; Grey = 1; Black = 2;
  */
 template <typename G>
 bool has_cycle (const G& g) {
+    // Retrieve vertex iterators
+    std::pair<typename G::vertex_iterator, typename G::vertex_iterator> iterv (vertices(g));
+    // Create a map with each item set as unvisited (white)
+    std::map<int, int> vmap (iterv.first, iterv.second, 0);
+
+    // Store the beginning and ending iterators from the pair
+    typename G::vertex_iterator b = iterv.first;
+    typename G::vertex_iterator e = iterv.second;
+
+    while (b != e){
+        break;
+    }
+
     return true;}
 
 // ----------------
