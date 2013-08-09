@@ -1,0 +1,176 @@
+commit 85588c9b33933f7a1ff8281eef0fbf9431f5f9d3
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 21:24:19 2013 -0500
+
+    corrected vertex
+
+commit 235f8c3ad98a7d0c250ce19d2856ef1f8fabc8e7
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 21:19:49 2013 -0500
+
+    has_cycle() working and passing tests
+
+commit 2c8f123ad3f477a9abca6fb4ffe2f2c478eb19a8
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 21:07:23 2013 -0500
+
+    unsigned error fixed
+
+commit c11eccd5e1c7057fb12dfa2be4817a89a2c32e58
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 21:05:59 2013 -0500
+
+    has_cycle now returning correct boolean
+
+commit 534a1981602373b228421cf98c4a2fd523fa61de
+Merge: d4e634a 5424a0b
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 21:02:26 2013 -0500
+
+    Merge branch 'master' of github.com:eayivi/cs378-graph
+
+commit d4e634ab7fd46eac80f342fa015b9d8bd1470a90
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 21:01:58 2013 -0500
+
+    has_cycle distance checking added
+
+commit 5424a0bedc06fded96018ffa32960d1132279a37
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 20:58:38 2013 -0500
+
+    improve unit test
+
+commit a53d0953c3cc6a551f3599def858daf2dbac6cf8
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 20:55:13 2013 -0500
+
+    Fixed merge problems
+
+commit d099f5e7cb9d4c1b3a2d17b73c07c20438e4840f
+Merge: ec74f80 eea6771
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 20:53:10 2013 -0500
+
+    Merge branch 'master' of github.com:eayivi/cs378-graph
+
+commit ec74f80c9b7a091b3d4221864c51061cab084041
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 20:52:33 2013 -0500
+
+    has_cycle no longer seg faults, but still incorrect
+
+commit eea67716ea9fc6502c8ff0730f736b58df09fa4e
+Merge: a99704b e52eb73
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 20:46:25 2013 -0500
+
+    Merge branch 'master' of https://github.com/eayivi/cs378-graph
+
+commit a99704bb18190eabae46ae817962fd99841bb5d1
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 20:45:02 2013 -0500
+
+    improved unit test
+
+commit e52eb73bd2a5dbc86e58cb8b4f5d69f99d09b4c5
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 20:00:35 2013 -0500
+
+    Better has_cycle() still seg fault
+
+commit dbc52f090980b266cfcff4c029436af963b947e3
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 19:40:08 2013 -0500
+
+    has_cycle compiling.
+
+commit 2cf232eb0f91975478725e66704c36e903cd940c
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 17:46:03 2013 -0500
+
+    Continuing with has_cycle() and fixed unit tests.
+
+commit 7ec46bb664f8039a8652c1f30e05eebe2871cfb8
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 05:09:53 2013 -0500
+
+    has_cycle, sort, and unit testing remain.
+
+commit a722de00f6bcc4c3c456ad9733551ec1e387b862
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 04:48:36 2013 -0500
+
+    Iterators and edge complete.
+
+commit f716480d5958e5e2748750e28b2f52d1935de313
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 04:30:31 2013 -0500
+
+    Iterator pair functions written, documented and typedefs changed.
+
+commit 8d524c9dc59db4aa64f30d355d90006586d2aa8e
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 03:46:31 2013 -0500
+
+    Number functions complete
+
+commit d7a099d9eabf7c73f86f9b5b91ce3acf2de8f3e5
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 01:12:19 2013 -0500
+
+    add Skeleton gtest
+
+commit 2a14bd734a71f54f7a161b063888d6d80ee58b9a
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Thu Aug 8 01:09:25 2013 -0500
+
+    Update makefile with gtest
+
+commit c1c4cd570e29e92278b7052bd595cc548e280c52
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 23:52:09 2013 -0500
+
+    Create Gtest unit test file
+
+commit bd2c2cf505a2fc029bfe001682a5a3addcf99e83
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 23:49:45 2013 -0500
+
+    Rename TestGraph.c++ to old_TestGraph.c++
+
+commit d87257b9da06328dee9b5ec9f8ebae0293c02868
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Aug 6 21:57:42 2013 -0500
+
+    Started on adjacency iterators.
+
+commit 99986d2e81565918ad96853d6099160f9e33c740
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Aug 6 21:29:09 2013 -0500
+
+    add_edge and add_vertex complete.
+
+commit 0706dfb1e44000b852399d32676cd02e2388d988
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Aug 4 22:39:11 2013 -0500
+
+    Attempt at add_edges
+
+commit 2814e6dfad461272441f77b0e07844d4edf0706a
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Aug 4 22:20:10 2013 -0500
+
+    added typedefs
+
+commit c370ec0d08fd7ea7d90265213265ecf133fa3e9d
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Aug 4 21:43:01 2013 -0500
+
+    initial commit
+
+commit 5aaab78d80822510013c2732b77263b1cc9eac26
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Aug 4 19:38:04 2013 -0700
+
+    Initial commit

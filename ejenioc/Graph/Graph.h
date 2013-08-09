@@ -132,7 +132,6 @@ class Graph {
          */
         friend edges_size_type num_edges (const Graph& graph) {
             // <your code>
-            assert((int)graph.edgeSet.size()>=0);
             edges_size_type s = graph.edgeSet.size();
             return s;}
 
@@ -146,7 +145,6 @@ class Graph {
          */
         friend vertices_size_type num_vertices (const Graph& graph) {
             // <your code>
-            assert((int)graph.edgeSet.size()>=0);
             vertices_size_type s = graph.vertexSet.size();
             return s;}
 
