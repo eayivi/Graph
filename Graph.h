@@ -291,7 +291,7 @@ bool cycle_helper(const G& g, typename G::vertex_descriptor v, std::map<int, int
 
     vmap[v] = 1;
 
-    while(b != e && dist > 0 && dist < num_vertices(g)){
+    while(b != e && dist > 0 && dist < int(num_vertices(g))){
         // std::cout << "WHILE TEST: " << *b << std::endl;
         if(vmap[*b] == 0){
             if (cycle_helper(g, *b, vmap))
