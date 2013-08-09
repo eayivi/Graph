@@ -473,6 +473,7 @@ TYPED_TEST (TypeTest, test_vertex )
 {
     typedef typename TestFixture::vertex_descriptor vertex_descriptor;
     vertex_descriptor vd = vertex(0, this->g);
+    // std::cout << "\nvd is " << vd <<" and this->vdA is " << this->vdA << std::endl;
     ASSERT_TRUE(vd == this->vdA);
 }
 
@@ -481,16 +482,8 @@ TYPED_TEST (TypeTest, test_vertex_no_cyle )
     this->SetUp_NoCycle();
     typedef typename TestFixture::vertex_descriptor vertex_descriptor;
     vertex_descriptor vd = vertex(1, this->g2);
+    // std::cout << "\nvd is " << vd <<" and this->vdB is " << this->vdB << std::endl;
     ASSERT_TRUE(vd == this->vdB);
-}
-
-TYPED_TEST (TypeTest, test_vertex_no_edges )
-{
-    this->SetUp_NoEdges();
-    typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-    vertex_descriptor vd = vertex(7, this->g3);
-    
-    ASSERT_TRUE(vd == 7);
 }
 
 // -------------
@@ -562,7 +555,7 @@ TYPED_TEST(TypeTest, test_vertices_default )
 // --------------
 // test_has_cycle
 // --------------
-
+/*
 TYPED_TEST(TypeTest, test_has_cycle ) 
 {
     this->SetUp();
@@ -593,7 +586,7 @@ TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
     add_edge(this->vdH, this->vdA, this->g2);
     ASSERT_TRUE(has_cycle(this->g2));
 }
-
+*/
 // ---------------------
 // test_topological_sort
 // ---------------------
