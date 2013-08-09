@@ -257,20 +257,46 @@ class Graph {
  */
 template <typename G>
 bool has_cycle (const G& g) {
+    // Returns boolean answer from cycle_helper()
+    bool cycle;
     // Retrieve vertex iterators
     std::pair<typename G::vertex_iterator, typename G::vertex_iterator> iterv (vertices(g));
     // Create a map with each item set as unvisited (white)
-    std::map<int, int> vmap (iterv.first, iterv.second, 0);
+    std::map<int, int> vmap;
 
     // Store the beginning and ending iterators from the pair
     typename G::vertex_iterator b = iterv.first;
     typename G::vertex_iterator e = iterv.second;
 
-    while (b != e){
-        break;
-    }
+    while (b != e)
+        cycle = cycle_helper(g, *b, vmap);
+    assert(false);
+    return cycle;}
 
-    return true;}
+/*
+ *  Helper function that allows recursion.
+ */
+
+template <typename G>
+bool cycle_helper(const G& g, typename G::vertex_descriptor v, std::map<int, int> vmap){
+    std::pair<typename G::adjacency_iterator, typename G::adjacency_iterator> node = adjacent_vertices(v, g);
+    typename G::adjacency_iterator b = node.first;
+    typename G::adjacency_iterator e = node.second;
+
+    vmap[v] = 1;
+
+    while(b != e){
+        if(vmap[*b] == 0){
+            if (cycle_helper(g, *b, vmap))
+                return true;
+        }
+        else if (vmap[*b] == 1)
+            return true;
+        else if (vmap[*b] == 2)
+            return false;
+    }
+    return false;
+}
 
 // ----------------
 // topological_sort

@@ -562,7 +562,7 @@ TYPED_TEST(TypeTest, test_vertices_default )
 // --------------
 // test_has_cycle
 // --------------
-/*
+
 TYPED_TEST(TypeTest, test_has_cycle ) 
 {
     this->SetUp();
@@ -597,7 +597,7 @@ TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
 // ---------------------
 // test_topological_sort
 // ---------------------
-
+/*
 TYPED_TEST (TypeTest, test_topological_sort_with_cycle )
 {
     typedef typename TestFixture::vertex_descriptor vertex_descriptor;
