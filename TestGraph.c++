@@ -258,18 +258,6 @@ TYPED_TEST (TypeTest, test_adjacent_vertices_vdB)
             ASSERT_TRUE(vd == this->vdE);}
 }
 
-TYPED_TEST (TypeTest, test_adjacent_vertices_vdH)  
-{
-        typedef typename TestFixture::adjacency_iterator adjacency_iterator;
-        typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-        
-        pair<adjacency_iterator, adjacency_iterator> p = adjacent_vertices(this->vdH, this->g);
-        
-        adjacency_iterator b = p.first;
-        adjacency_iterator e = p.second;
-        
-        ASSERT_EQ(b , e);
-}
 
 // ---------
 // test_edge
