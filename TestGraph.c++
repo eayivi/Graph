@@ -555,7 +555,7 @@ TYPED_TEST(TypeTest, test_vertices_default )
 // --------------
 // test_has_cycle
 // --------------
-/*
+
 TYPED_TEST(TypeTest, test_has_cycle ) 
 {
     this->SetUp();
@@ -586,7 +586,7 @@ TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
     add_edge(this->vdH, this->vdA, this->g2);
     ASSERT_TRUE(has_cycle(this->g2));
 }
-*/
+
 // ---------------------
 // test_topological_sort
 // ---------------------
