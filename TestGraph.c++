@@ -586,7 +586,7 @@ TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default )
    
     ASSERT_FALSE(has_cycle(this->g4));
 }
-
+/*
 TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
 {
     this->SetUp_NoCycle();
@@ -597,7 +597,7 @@ TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
 // ---------------------
 // test_topological_sort
 // ---------------------
-/*
+
 TYPED_TEST (TypeTest, test_topological_sort_with_cycle )
 {
     typedef typename TestFixture::vertex_descriptor vertex_descriptor;
