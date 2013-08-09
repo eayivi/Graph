@@ -180,13 +180,7 @@ class Graph {
          *  Return the s vertex from the vertex set.
          */
         friend vertex_descriptor vertex (vertices_size_type s, const Graph& graph) {
-
-            if ((int)s ==0) {
-                s++;
-             } else if ((unsigned) *(graph.vertexSet.find(s))== (unsigned) s ) {
-                 s++;
-             }
-
+            // <your code>
             vertex_descriptor vd = *(graph.vertexSet.find(s));
             return vd;}
 
@@ -264,7 +258,6 @@ class Graph {
 template <typename G>
 bool has_cycle (const G& g) {
     // Returns boolean answer from cycle_helper()
-    bool cycle;
     // Retrieve vertex iterators
     std::pair<typename G::vertex_iterator, typename G::vertex_iterator> iterv (vertices(g));
     // Create a map with each item set as unvisited (white)
@@ -278,10 +271,11 @@ bool has_cycle (const G& g) {
 
     while (b != e){
         // std::cout << *b << std::endl;
-        cycle = cycle_helper(g, *b, vmap);
+        if(cycle_helper(g, *b, vmap))
+            return true;
         ++b;
     }
-    return cycle;}
+    return false;}
 
 /*
  *  Helper function that allows recursion.
