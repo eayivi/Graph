@@ -567,14 +567,8 @@ TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default )
    
     ASSERT_FALSE(has_cycle(this->g4));
 }
-/*
-TYPED_TEST(TypeTest, test_has_cycle_many_cycles)
-{
-    this->SetUp_NoCycle();
-    add_edge(this->vdH, this->vdA, this->g2);
-    ASSERT_TRUE(has_cycle(this->g2));
-}
 
+/*
 // ---------------------
 // test_topological_sort
 // ---------------------

@@ -266,11 +266,8 @@ bool has_cycle (const G& g) {
     // Store the beginning and ending iterators from the pair
     typename G::vertex_iterator b = iterv.first;
     typename G::vertex_iterator e = iterv.second;
-    std::cout << "Distance: " << distance(b, e) << std::endl;
-    // std::cout << num_vertices(g) << std::endl;
 
     while (b != e){
-        // std::cout << *b << std::endl;
         if(cycle_helper(g, *b, vmap))
             return true;
         ++b;
@@ -287,12 +284,10 @@ bool cycle_helper(const G& g, typename G::vertex_descriptor v, std::map<int, int
     typename G::adjacency_iterator b = node.first;
     typename G::adjacency_iterator e = node.second;
     int dist = distance(b, e);
-    // std::cout << "Distance: " << distance(b, e) << std::endl;
 
     vmap[v] = 1;
 
     while(b != e && dist > 0 && dist < int(num_vertices(g))){
-        // std::cout << "WHILE TEST: " << *b << std::endl;
         if(vmap[*b] == 0){
             if (cycle_helper(g, *b, vmap))
                 return true;
