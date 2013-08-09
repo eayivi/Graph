@@ -180,10 +180,15 @@ class Graph {
          *  Return the s vertex from the vertex set.
          */
         friend vertex_descriptor vertex (vertices_size_type s, const Graph& graph) {
-            // <your code>
+
+            if ((int)s ==0) {
+                s++;
+             } else if ((unsigned) *(graph.vertexSet.find(s))== (unsigned) s ) {
+                 s++;
+             }
+
             vertex_descriptor vd = *(graph.vertexSet.find(s));
             return vd;}
-
         // --------
         // vertices
         // --------

@@ -550,23 +550,17 @@ TYPED_TEST(TypeTest, test_has_cycle )
     ASSERT_TRUE(has_cycle(this->g));
 }
 
-TYPED_TEST(TypeTest, test_has_cycle_no_cycle ) 
-{
-    this->SetUp_NoCycle();
-    ASSERT_FALSE(has_cycle(this->g2));
-}
+// TYPED_TEST(TypeTest, test_has_cycle_no_cycle_no_edges ) 
+// {
+//     this->SetUp_NoEdges();
+//     ASSERT_FALSE(has_cycle(this->g3));
+// }
 
-TYPED_TEST(TypeTest, test_has_cycle_no_cycle_no_edges ) 
-{
-    this->SetUp_NoEdges();
-    ASSERT_FALSE(has_cycle(this->g3));
-}
-
-TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default ) 
-{
+// TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default ) 
+// {
    
-    ASSERT_FALSE(has_cycle(this->g4));
-}
+//     ASSERT_FALSE(has_cycle(this->g4));
+// }
 
 /*
 // ---------------------
