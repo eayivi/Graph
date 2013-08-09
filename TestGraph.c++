@@ -550,82 +550,20 @@ TYPED_TEST(TypeTest, test_has_cycle )
     ASSERT_TRUE(has_cycle(this->g));
 }
 
-// TYPED_TEST(TypeTest, test_has_cycle_no_cycle_no_edges ) 
-// {
-//     this->SetUp_NoEdges();
-//     ASSERT_FALSE(has_cycle(this->g3));
-// }
-
-// TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default ) 
-// {
-   
-//     ASSERT_FALSE(has_cycle(this->g4));
-// }
-
-/*
-// ---------------------
-// test_topological_sort
-// ---------------------
-
-TYPED_TEST (TypeTest, test_topological_sort_with_cycle )
+TYPED_TEST(TypeTest, test_has_cycle_no_cycle ) 
 {
-    typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-    ostringstream out;
-    try{
-        topological_sort(this->g, ostream_iterator<vertex_descriptor>(out, " "));
-
-    }
-    catch(boost::not_a_dag& e){
-        ASSERT_TRUE(string(e.what()) == "The graph must be a DAG.");
-    }
-       // ASSERT_TRUE(out.str() == "2 0 1 ");
-}
-
-TYPED_TEST (TypeTest, test_topological_sort_no_cycle )
-{
-    typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-    typedef typename TestFixture::graph_type graph_type;
     this->SetUp_NoCycle();
-
-    ostringstream out;
-    try{
-        topological_sort(this->g2, ostream_iterator<vertex_descriptor>(out, " "));
-        ASSERT_EQ(std::string("4 7 5 3 1 2 0 6 "), out.str());
-    }
-    catch(boost::not_a_dag& e){
-        ASSERT_TRUE(false);
-    }
+    ASSERT_FALSE(has_cycle(this->g2));
 }
 
-
-TYPED_TEST (TypeTest, test_topological_sort_no_edges )
+TYPED_TEST(TypeTest, test_has_cycle_no_cycle_no_edges ) 
 {
-    typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-    typedef typename TestFixture::graph_type graph_type;
     this->SetUp_NoEdges();
-
-    ostringstream out;
-    try{
-        topological_sort(this->g3, ostream_iterator<vertex_descriptor>(out, " "));
-        ASSERT_EQ(std::string("0 1 2 3 "), out.str());
-    }
-    catch(boost::not_a_dag& e){
-        ASSERT_TRUE(false);
-    }
+    ASSERT_FALSE(has_cycle(this->g3));
 }
 
-TYPED_TEST (TypeTest, test_topological_sort_default )
+TYPED_TEST(TypeTest, test_has_cycle_no_cycle_default ) 
 {
-    typedef typename TestFixture::vertex_descriptor vertex_descriptor;
-    
-
-    ostringstream out;
-    try{
-        topological_sort(this->g4, ostream_iterator<vertex_descriptor>(out, " "));
-        ASSERT_EQ(std::string(""), out.str());
-    }
-    catch(boost::not_a_dag& e){
-        ASSERT_TRUE(false);
-    }
+   
+    ASSERT_FALSE(has_cycle(this->g4));
 }
-*/
