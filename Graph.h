@@ -267,7 +267,7 @@ bool has_cycle (const G& g) {
     // Store the beginning and ending iterators from the pair
     typename G::vertex_iterator b = iterv.first;
     typename G::vertex_iterator e = iterv.second;
-
+    std::cout << "Distance: " << distance(b, e) << std::endl;
     // std::cout << num_vertices(g) << std::endl;
 
     while (b != e){
